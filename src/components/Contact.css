@@ -1,0 +1,146 @@
+/* src/components/Contact.css */
+
+.contact-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 10rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 5rem;
+}
+
+.contact-header h2 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.contact-header p {
+  font-size: 1.4rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.contact-content {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+.contact-left {
+  flex: 0.8;
+}
+
+.contact-info {
+  margin-top: 2rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.social-icons a {
+  color: #94a3b8;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #6366f1;
+  transform: translateY(-5px);
+}
+
+.contact-right {
+  flex: 1.2;
+  width: 100%;
+}
+
+.contact-right form {
+  background: #f8fafc;
+  padding: 4rem;
+  border-radius: 40px;
+  border: 1px solid #e2e8f0;
+}
+
+.contact-right label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 1.25rem;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.contact-right button {
+  width: 100%;
+  background: #1e293b;
+  color: white;
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-right button:hover {
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .contact-header h2 {
+    font-size: 3rem;
+  }
+  .contact-right form {
+    padding: 2.5rem;
+  }
+}

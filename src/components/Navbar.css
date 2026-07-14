@@ -1,0 +1,111 @@
+.floating-navbar {
+  position: sticky;
+  top: 1.5rem;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-navbar:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(10deg);
+}
+
+.navbar-right {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.navbar-right li a {
+  text-decoration: none;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-right li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #6366f1, #ec4899);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-right li a:hover {
+  color: #1e293b;
+}
+
+.navbar-right li a:hover::after {
+  width: 100%;
+}
+
+.demo-btn {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.demo-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.2);
+}
+
+.navbar-hidden {
+  transform: translateY(-200%);
+}
+
+@media (max-width: 900px) {
+  .navbar-right {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .floating-navbar {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    width: 95%;
+  }
+  
+  .navbar-right {
+    display: none; /* Hide on mobile or implement a burger menu */
+  }
+}
